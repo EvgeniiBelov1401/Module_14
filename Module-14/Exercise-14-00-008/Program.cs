@@ -24,9 +24,9 @@
             #endregion
 
             #region методы-расширения
-            var selectName2=objects.Where(n => n is string).OrderBy(n => n);
+            
 
-            foreach (var obj in selectName2)
+            foreach (var obj in objects.Where(n => n is string).OrderBy(n => n))
             {
                 Console.WriteLine(obj);
             }
