@@ -31,10 +31,22 @@
 
             foreach (var country in Countries)
             {
-                foreach (var city in country.Value.Where(x=>x.Population>1000000))
+                foreach (var city in country.Value.Where(x=>x.Population>1000000).OrderByDescending(x=>x.Population))
                 {
                     Console.WriteLine(city.Name+": "+city.Population);
                 }
+            }
+
+            Console.WriteLine();
+            Console.ReadLine();
+            var millionCity=from country in Countries
+                            from city in country.Value
+                            where city.Population >1000000
+                            orderby city.Population descending
+                            select city;
+            foreach (var city in millionCity)
+            {
+                Console.WriteLine(city.Name + ": " + city.Population);
             }
         }
     }
