@@ -29,7 +29,7 @@
                 Console.WriteLine(japanCar.Manufacturer);
 
             Console.WriteLine();
-            cars.RemoveAll(x=>x.CountryCode=="JP");
+            cars.RemoveAll(car=>car.CountryCode=="JP");
             foreach (var car in cars)
             {
                 Console.WriteLine(car.Manufacturer);
