@@ -33,7 +33,7 @@
             {
                 foreach (var city in country.Value.Where(x=>x.Population>1000000))
                 {
-                    Console.WriteLine(city.Name);
+                    Console.WriteLine(city.Name+": "+city.Population);
                 }
             }
         }
