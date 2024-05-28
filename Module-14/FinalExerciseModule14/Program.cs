@@ -90,10 +90,6 @@
                 Console.ReadLine();
                 Console.Clear();
             }
-           
-
-            
-
         }
     }
 }
