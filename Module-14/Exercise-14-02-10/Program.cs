@@ -11,13 +11,13 @@
             switch (inputPage)
             {
                 case '1':
-                    page = list.Take(2).ToList();
+                    page = list.Take(2).OrderBy(x=>x.Name).ThenBy(x=>x.LastName).ToList();
                     break;
                 case '2':
-                    page = list.Skip(2).Take(2).ToList();
+                    page = list.Skip(2).Take(2).OrderBy(x => x.Name).ThenBy(x => x.LastName).ToList();
                     break;
                 case '3':
-                    page = list.Skip(4).ToList();
+                    page = list.Skip(4).OrderBy(x => x.Name).ThenBy(x => x.LastName).ToList();
                     break;
                 default:
                     page = null;
