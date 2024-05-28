@@ -72,7 +72,6 @@
             phoneBook.Add(new Contact("Антон", "Леонтьев", 79990044012, "anton@example.com"));
             phoneBook.Add(new Contact("Василий", "Карпов", 79990034111, "vasya@example.com"));
 
-            
 
             while (true)
             {
@@ -85,10 +84,8 @@
                     Console.WriteLine($"{contact.FirstName} {contact.LastName}: {contact.PhoneNumber} ({contact.Email})");
                 }
                 Console.ForegroundColor = ConsoleColor.White;
-                
-                
+                              
                 Sorting(InputChar(), phoneBook);
-
 
                 Console.ReadLine();
                 Console.Clear();
